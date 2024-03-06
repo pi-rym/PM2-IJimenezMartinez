@@ -1,0 +1,39 @@
+/* reset.css */
+
+/* Establecer todos los márgenes y rellenos en 0 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Establecer la fuente predeterminada a sans-serif */
+  body {
+    font-family: sans-serif;
+  }
+  
+  /* Eliminar la decoración de los enlaces */
+  a {
+    text-decoration: none;
+  }
+  
+  /* Resetear la lista sin viñetas */
+  ul, ol {
+    list-style: none;
+    white-space: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
+  }
+  
+  /* Eliminar el espaciado entre los elementos de la lista */
+  li {
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* Muestra los elementos en línea */
+  }
+  
+  /* Establecer el tamaño de fuente a 100% para evitar el redimensionamiento en navegadores */
+  html {
+    font-size: 100%;
+  }
+  
+  /* Otras normalizaciones específicas se pueden agregar según las necesidades */
+  
