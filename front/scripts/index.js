@@ -3,13 +3,13 @@ const filmSection = document.getElementById('films')
 function renderFilms(movie){
 
     const movieElement = document.createElement('article')
-    const card = document.createElement('div')
+    const containerMovie = document.createElement('div')
+    movieElement.classList.add('movie')
+    containerMovie.classList.add('divMovie')
 
-    card.classList.add('divMovie')
+    movieElement.innerHTML = `<img src="${movie.poster}" arc="${movie.title}">`
 
-    card.innerHTML = `<img src="${movie.poster}" arc="${movie.title}">`
-
-    card.innerHTML = `
+    containerMovie.innerHTML = `
     <h3>${movie.title} (${movie.year})</h3>
     <p><strong>Director:</strong> ${movie.director}</p>
     <p><strong>Duración:</strong> ${movie.duration}</p>

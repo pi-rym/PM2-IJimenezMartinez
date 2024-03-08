@@ -1,38 +1,85 @@
-/* Estilos para las tarjetas de películas */
-.movie {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+#films {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    color: #f6f4e6;
+  }
+  
+  #films .movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20em;
+    margin-left: 1em;
+  
+    flex: 1;
+    flex-basis: 300px;
+    flex-grow: 0;
+    height: 410px;
+    background: rgba(22, 18, 18, 1);
+    border: 4px solid rgb(28, 65, 83);
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);
+    border-radius: 4.5%;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    overflow: hidden;
+    /* position: relative; */
+  }
+  
+  #films .movie .divMovie {
+    border: #f6f4e6 solid 1px;
+    max-width: 300px;
+  
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(28, 65, 83, 0.7);
+    width: 100%;
+    height: 100%;
+    transition: all 0.7s ease-in-out;
     padding: 20px;
-    transition: transform 0.3s ease;
-}
-
-/* Estilos para la imagen de la película */
-.movie img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-/* Estilos para el título de la película */
-.movie h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-    color: #333;
-}
-
-/* Estilos para la información de la película */
-.movie p {
-    margin-bottom: 5px;
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Estilos para los elementos fuertes dentro de la información de la película */
-.movie strong {
-    font-weight: bold;
-    color: #000;
-}
+    box-sizing: border-box;
+    clip-path: circle(0% at 100% 100%);
+  }
+  
+  #films .movie:hover .divMovie {
+    left: 0px;
+    transition: all 0.7s ease-in-out;
+    clip-path: circle(75%);
+  }
+  
+  #films .movie:hover {
+    transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    transform: scale(0.97);
+  }
+  
+  #films .movie h3 {
+    padding-left: 0.3em;
+    color: #f6f4e6;
+    font-weight: 700;
+    margin-bottom: 1em;
+  }
+  
+  #films .movie p {
+    margin: 0.3em;
+    letter-spacing: 1px;
+    color: f6f4e6;
+  }
+  
+  #films .movie:hover img {
+    transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    transform: scale(1.6) rotate(20deg);
+    filter: blur(3px);
+  }
+  
+  #films img {
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 0.5em;
+  
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  }
