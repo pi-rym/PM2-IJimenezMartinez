@@ -1,6 +1,6 @@
 const filmSection = document.getElementById('films')
 
-    function renderFilms(movie){
+    function renderCards(movie){
 
         const movieElement = document.createElement('article')
         const containerMovie = document.createElement('div')
@@ -20,8 +20,5 @@ const filmSection = document.getElementById('films')
         filmSection.appendChild(movieElement)
         movieElement.appendChild(containerMovie)
     }
-
-    $.get("https://students-api.up.railway.app/movies", (data) => data.forEach(renderFilms));
-
 
 module.exports = renderCards;

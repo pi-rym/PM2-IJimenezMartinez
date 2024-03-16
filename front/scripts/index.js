@@ -1,2 +1,3 @@
-const renderCards = require('./renderCards');
+const getCards = require('./handler')
 
+getCards()
