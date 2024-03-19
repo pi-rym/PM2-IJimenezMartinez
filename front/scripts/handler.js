@@ -5,10 +5,14 @@ const renderCards = require('./renderCards');
 //     $.get("https://students-api.up.railway.app/movies", (data) => data.forEach(renderCards));
 // }
 
-const getCards = () =>{
-    axios.get("https://students-api.up.railway.app/movies")
-    .then(({ data }) => data.forEach(renderCards))
-    .catch((err) => console.log(err.message))
+const getCards = async () =>{
+    try {
+        const { data } = await axios.get("https://students-api.up.railway.app/movies");
+        data.forEach(renderCards)
+    } catch (error) {
+        console.log(error.message);
+    }
+    
 }
 
 
