@@ -7,7 +7,7 @@ const movieSchema = new Schema({
     director: String,
     duration: String,
     genre: Array,
-    rate: Schema.Types.Decimal128,
+    rate: Number,
     poster: String,
 });
 
