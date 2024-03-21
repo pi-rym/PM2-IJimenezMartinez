@@ -5,7 +5,7 @@ const movieSchema = new Schema({
     title: String,
     year: Number,
     director: String,
-    duration: Schema.Types.Mixed,
+    duration: String,
     genre: Array,
     rate: Schema.Types.Decimal128,
     poster: String,

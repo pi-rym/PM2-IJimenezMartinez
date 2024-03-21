@@ -31,66 +31,48 @@
     <main>
         <section id="contact" class="container-sm w-80 p-3 p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
             <h3 class="mb-3">CREAR PELÍCULA</h3>
-            <form class="needs-validation m-5" novalidate>
+            <form class="m-5" id="form" name="form">
 
                 <div class="container mb-3">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" class="form-control" name="name" required>
-                    <div class="invalid-feedback">
-                        Por favor ingresa tu nombre
-                    </div>
+                    <label for="title">Nombre:</label>
+                    <input type="text" id="title" class="form-control" name="title" required>
                 </div>
 
                 <div class="container mb-3">
                     <label for="year">Año:</label>
-                    <input type="number" id="year" class="form-control" name="year" required>
-                    <div class="invalid-feedback">
-                        Por favor ingresa un año valido
-                    </div>
+                    <input type="number" id="year" class="form-control" name="year" min="1800" required>
                 </div>
 
                 <div class="container mb-3">
                     <label for="director">Director:</label>
                     <input type="text" id="director" class="form-control" name="director" required>
-                    <div class="invalid-feedback">
-                        Por favor ingresa el nombre del director
-                    </div>
                 </div>
                 
                 <div class="container mb-3">
                     <label for="duration">Duración:</label>
                     <input type="text" id="duration" class="form-control" name="duration" required>
-                    <div class="invalid-feedback">
-                        Por favor ingresa la duración de la película
-                    </div>
                 </div>
                 
                 <div class="container mb-3">
-                    <label for="genre">Genero:</label>
-                    <input type="text" id="genre" class="form-control" name="genre" required>
-                    <div class="invalid-feedback">
-                        Por favor ingresa el genero de la película
-                    </div>
+                    <label for="genre" >Género:</label>
+                    <div id="options" class="d-flex flex-column"></div>
                 </div>
 
                 <div class="container mb-3">
-                    <label for="rate">Puntuación:</label>
-                    <input type="text" id="rate" class="form-control" name="rate" required>
-                    <div class="invalid-feedback">
-                        Por favor ingresa la puntuación de la película
-                    </div>
+                    <label for="rate">Calificación:</label>
+                    <input type="number" id="rate" class="form-control" name="rate" step="0.01" min="1" max="10" required>
                 </div>
                 
                 <div class="container mb-3">
-                    <label for="poster">URL de la Imagen:</label>
+                    <label for="poster">Poster:</label>
                     <input type="text" id="poster" class="form-control" name="poster" required>
-                    <div class="invalid-feedback">
-                        Por favor ingresa la URL de la imgane de la película
-                    </div>
                 </div>
                 
+                <div class="container mb-3 d-flex justify-content-around">
+                    <button class="btn btn-secondary" type="submit" value="enviar" id="btnSubmit">Enviar</button>
+                    <button class="btn btn-secondary" type="button" id="btnCleaner">Limpiar</button>
 
-                <button class="btn btn-secondary" type="submit">Enviar</button>
+                </div>
             </form>
         </section>
       
@@ -100,7 +82,8 @@
       <p >&copy;Copyright 2024 - Isabella Jimenez</p>
     </footer>
     
-    <script src="../scripts/form.js"></script>
+    
+    <script src="../public/films.js"></script>
 
   </body>
 </html>

@@ -7,7 +7,7 @@ const renderCards = require('./renderCards');
 
 const getCards = async () =>{
     try {
-        const { data } = await axios.get("https://students-api.up.railway.app/movies");
+        const { data } = await axios.get("http://localhost:3000/movies");
         data.forEach(renderCards)
     } catch (error) {
         console.log(error.message);
